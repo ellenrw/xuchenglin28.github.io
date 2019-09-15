@@ -1,7 +1,160 @@
-<!DOCTYPE html>
+
 <html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Deep Spike Neural Network for Speech Separation</title>
+  <link rel="stylesheet" type="text/css" href="resources/stylesheet.css">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div style="margin-right: auto;margin-left: auto; margin-top: 30px; margin-bottom: 100px; width: 70%;">
+    <div style="text-align: center;">
+      <h1>Deep Spike Neural Network for Speech Separation</h1>
+    </div>
+
+    <p><b>2019 International Collegiate Competition for Brain-inspired Computing:</b>
+      This webpage is to show some listening examples for the proposed speech separation method based on deep spike neural network. 
+    </p>
+	
+	<p> Speech separation is the computation underlying the cocktail party effect that a partygoer can distinguish a particular talker’s voice from other interference talkers or the ambient noise. Early studies indicated that the brain used speech separation as a signal processing strategy for sensory perception and discovered that neurons in cultures of dissociated cortical cells could learn to represent particular sources while filtering out other signals <sup>[1]</sup>. However, machines have yet to achieve the attention ability as human's brain in segregating different stimuli into different streams. Such auditory attention is required in real-world application, such as, hearing aid <sup>[2]</sup>, speech recognition <sup>[3]</sup>, speaker verification <sup>[4]</sup>, and speaker diarization <sup>[5]</sup>.
+	</p>
+
+	<p> Inspired by the auditory attention of the human brain, we propose a time-domain speech separation approach based on deep spike neural network (SNN) to solve the cocktail party problem, as shown in below figure. The SNN takes the mixture signal in and outputs individual speeches into different streams. with a stack of dilated convolutional networks, the SNN captures the long-range dependency of the speech signal with a manageable number of parameters. It is optimized to maximize a scale-invariant signal-to-distortion ratio (SI-SDR) <sup>[6]</sup> loss.
+	</p>
+	
+	<img src="img/cocktail_snn.png" alt="snn for cocktail party effect" />
+
+    <h2>Audio samples for two speakers' mixture condition</h2>
+    <p></p>
+    <p></p>
+	<h3> Type: </h3>
+	<ol>
+	    <li>F-F: female-female mixture speech </li>
+		<li>M-M: male-male mixture speech </li>
+		<li>M-F: male-female mixture speech </li>
+	</ol>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Mixture Input</th>
+          <th>Speaker 1 by ANN</th>
+          <th>Speaker 2 by ANN</th>
+          <th>Speaker 1 by SNN</th>
+          <th>Speaker 2 by SNN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-top:1px solid black">
+		  <td> M-F</td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/mix/050a050j_1.2216_22ga0109_-1.2216.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/ann/spk1/050a050j_1.2216_22ga0109_-1.2216.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/ann/spk2/050a050j_1.2216_22ga0109_-1.2216.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/snn/spk1/050a050j_1.2216_22ga0109_-1.2216.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/snn/spk2/050a050j_1.2216_22ga0109_-1.2216.wav"
+                type="audio/wav"></audio></td>
+        </tr>
+        <tr style="border-top:1px solid black">
+		  <td> F-F</td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/mix/050a0501_1.7783_442o030z_-1.7783.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/ann/spk1/050a0501_1.7783_442o030z_-1.7783.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/ann/spk2/050a0501_1.7783_442o030z_-1.7783.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/snn/spk1/050a0501_1.7783_442o030z_-1.7783.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/snn/spk2/050a0501_1.7783_442o030z_-1.7783.wav"
+                type="audio/wav"></audio></td>
+        </tr>
+		<tr style="border-top:1px solid black">
+		  <td> M-M</td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/mix/052o020o_1.9744_22go010z_-1.9744.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/ann/spk1/052o020o_1.9744_22go010z_-1.9744.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/ann/spk2/052o020o_1.9744_22go010z_-1.9744.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/snn/spk1/052o020o_1.9744_22go010z_-1.9744.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/snn/spk2/052o020o_1.9744_22go010z_-1.9744.wav"
+                type="audio/wav"></audio></td>
+        </tr>
+		<tr style="border-top:1px solid black">
+		  <td> F-F</td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/mix/053a050r_0.31637_444o030x_-0.31637.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/ann/spk1/053a050r_0.31637_444o030x_-0.31637.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/ann/spk2/053a050r_0.31637_444o030x_-0.31637.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/snn/spk1/053a050r_0.31637_444o030x_-0.31637.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/snn/spk2/053a050r_0.31637_444o030x_-0.31637.wav"
+                type="audio/wav"></audio></td>
+        </tr>
+		<tr style="border-top:1px solid black">
+		  <td> M-F</td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/mix/441c020m_2.4506_447o030z_-2.4506.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/ann/spk1/441c020m_2.4506_447o030z_-2.4506.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/ann/spk2/441c020m_2.4506_447o030z_-2.4506.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/snn/spk1/441c020m_2.4506_447o030z_-2.4506.wav"
+                type="audio/wav"></audio></td>
+          <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+              <source src="audio/snn/spk2/441c020m_2.4506_447o030z_-2.4506.wav"
+                type="audio/wav"></audio></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Reference</h2>
+    <p></p>
+    <p>[1]. T. Isomura, K. Kotani, and Y. Jimbo, “Cultured cortical neurons can perform blind source separation according to the free-energy principle,” PLoS computational biology, vol. 11, no. 12, pp. e1004643, 2015.
+	</p>
+	<p>[2]. D. Wang, “Deep learning reinvents the hearing aid,” IEEE spectrum, vol. 54, no. 3, pp.32–37, 2017. 
+	</p>
+	<p>[3]. J. Li, L. Deng, R. Haeb-Umbach, and Y. Gong, Robust automatic speech recognition: a bridge to practical applications, Academic Press, 2015.
+	</p>
+	<p>[4]. W. Rao, C. Xu, E. S. Chng, and H. Li, “Target speaker extraction for overlapped multi-talker speaker verification,” arXiv preprint arXiv:1902.02546, 2019.
+	</p>
+	<p>[5]. G. Sell, D. Snyder, A. McCree, D. Garcia-Romero, J. Villalba, M. Maciejewski, V. Manohar,N. Dehak, D. Povey, S. Watanabe, et al., “Diarization is hard: Some experiences and lessons learned for the jhu team in the inaugural dihard challenge.,” in Proc. of Interspeech, 2018, pp.2808–2812.
+	</p>
+	<p>[6]. J. Le Roux, S. Wisdom, H. Erdogan, and J. R Hershey, “Sdr–half-baked or well done?,” in ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing(ICASSP). IEEE, 2019, pp. 626–630.
+	</p>
+  </div>
+
 </body>
+
 </html>
