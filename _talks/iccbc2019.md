@@ -1,6 +1,6 @@
 ---
 title: "Deep Spike Neural Network for Speech Separation"
-collection: talks
+collection: demos
 type: "Demo"
 permalink: /talks/iccbc2019
 date: 2019-09-01
