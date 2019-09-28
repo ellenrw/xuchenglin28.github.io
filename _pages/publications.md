@@ -22,7 +22,7 @@ Wei Rao, <b>Chenglin Xu</b>, Eng Siong Chng, Haizhou Li.
 
 <b>Weighted Spatial Covariance Matrix Estimation for MUSIC based TDOA Estimation of Speech Sources</b> <br> 
 <b>Chenglin Xu</b>, Xiong Xiao, Sining Sun, Wei Rao, Eng Siong Chng, Haizhou Li.
-<i>in Interspeech 2017</i>. [[PDF](https://www.isca-speech.org/archive/Interspeech_2017/pdfs/0199.PDF)], [[CODE](https://github.com/xuchenglin28/WSCM-MUSIC]
+<i>in Interspeech 2017</i>. [[PDF](https://www.isca-speech.org/archive/Interspeech_2017/pdfs/0199.PDF)], [[CODE](https://github.com/xuchenglin28/WSCM-MUSIC)]
 
 <b>A Bidirectional LSTM Approach with Word Embeddings for Sentence Boundary Detection</b> <br> 
 <b>Chenglin Xu</b>, Xiong Xiao, Lei Xie.

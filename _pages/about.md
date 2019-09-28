@@ -20,4 +20,7 @@ redirect_from:
 * September 6, 2018, the paper "A Shifted Delta Coefficient Objective for Monaural Speech Separation using Multi-task Learning" was presented in Interspeech 2018.
 * April 17, 2018, the paper "Single Channel Speech Separation with Constrained Utterance Leval Permutation Invariant Training using Grid LSTM" was presented in ICASSP 2018.
 * August 22, 2017, the paper "Weighted Spatial Covariance Matrix Estimation for MUSIC based TDOA Estimation of Speech Source" was presented in Interspeech 2017.
-*
+
+# Upcoming Events
+* October 19-20, 2019, attend the final ICCBC 2019 Challenge in Tsinghua University, Beijing, China.
+* December 14-18, 2019, attend the ASRU 2019 in Sentosa, Sinapore
