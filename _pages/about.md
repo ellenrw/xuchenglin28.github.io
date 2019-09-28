@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-* I am a Ph.D. student in the [School of Computer Science and Engineering](http://scse.ntu.edu.sg/Pages/Home.aspx) at [Nanyang Technological University](https://www.ntu.edu.sg/Pages/home.aspx), Singapore. I am supervised by A/Prof. [Eng Siong Chng](https://www.ntu.edu.sg/home/aseschng/) and Prof. [Haizhou Li](http://www.colips.org/~eleliha/). [[Google Scholar](https://scholar.google.com.sg/citations?user=Ww8tQKAAAAAJ&hl=en)]
+* I am a Ph.D. student in the [School of Computer Science and Engineering](http://scse.ntu.edu.sg/Pages/Home.aspx) at [Nanyang Technological University](https://www.ntu.edu.sg/Pages/home.aspx), Singapore. I am supervised by A/Prof. [Eng Siong Chng](https://www.ntu.edu.sg/home/aseschng/) and Prof. [Haizhou Li](http://www.colips.org/~eleliha/). [[CV](http://xuchenglin28.github.io/files/cv.pdf)][[Google Scholar](https://scholar.google.com.sg/citations?user=Ww8tQKAAAAAJ&hl=en)]
 * I received my Bachelor’s and Master's Degree from [Northwestern Polytechnical University](https://en.nwpu.edu.cn), China, in 2012 and 2015. My supervisor is Prof. [Lei Xie](http://lxie.nwpu-aslp.org/index.htm).
 * My main interests include speech separation/enhancement/extraction, beamforming, robust speech recognition and deep learning.
 
